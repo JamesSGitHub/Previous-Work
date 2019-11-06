@@ -1,0 +1,17 @@
+C:\Users\Mostl\source\repos\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.exe.config
+C:\Users\Mostl\source\repos\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.exe
+C:\Users\Mostl\source\repos\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.pdb
+C:\Users\Mostl\source\repos\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.xml
+C:\Users\Mostl\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbprojResolveAssemblyReference.cache
+C:\Users\Mostl\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Form1.resources
+C:\Users\Mostl\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Resources.resources
+C:\Users\Mostl\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbproj.GenerateResource.Cache
+C:\Users\Mostl\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbproj.CoreCompileInputs.cache
+C:\Users\Mostl\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.exe
+C:\Users\Mostl\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.xml
+C:\Users\Mostl\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.pdb
+C:\Users\Mostl\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Difficulty.resources
+C:\Users\Mostl\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.GameScreen.resources
+C:\Users\Mostl\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Escape.resources
+C:\Users\Mostl\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Options.resources
+C:\Users\Mostl\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Scoreboard.resources
