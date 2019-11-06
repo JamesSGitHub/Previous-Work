@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html> <head>
+<title>Question3</title>
+<style>
+body {
+  text-align: center;
+  color: Black;
+  font: 20px "Arial Black";
+}
+
+#grid {
+  display: inline-block;
+  margin: 25px;
+}
+
+#result {
+  margin: 10px;
+}
+
+.cell {
+  width: 80px;
+  height: 80px;
+  float: left;
+  border: 1px solid grey;
+  color: black;
+  font: 50px sans-serif;
+  line-height: 80px;
+  text-align: center;
+}
+
+div.win {
+	background-color: green;
+	transition: 1s;
+}
+.left {
+	clear:both;
+}
+</style>
+
+<script type="text/javascript">
+
+var player = 0;
+var moves = 0;
+var end = false;
+
+function Update() {
+
+      // no winner/draw yet
+      if (!end) {
+	    // get cell that was clicked on.
+        var cell = event.target;
+          
+        // row and column of cell.
+        var cellRow = Math.floor(cell.id / 3);
+        var cellCol = cell.id % 3;
+
+        // check position is empty.
+        if (cell.innerHTML == "") {
+
+          // display the O or X.
+          cell.innerHTML = "OX" [player];
+		
+		  // check draw.
+		  checkDraw();
+		  
+		  // check win.
+		  checkWin();
+		  
+          // increase moves taken.
+          moves++;
+
+          // next player.
+          player = (player + 1) % 2;
+        }
+      }
+    }
+
+function checkWin() {
+	// takes each cell and looks whether the text inside is a 0 or X.
+    var box1 = document.getElementById("0");
+	var box1Text = box1.innerHTML
+    var box2 = document.getElementById("1");
+	var box2Text = box2.innerHTML
+    var box3 = document.getElementById("2");
+	var box3Text = box3.innerHTML
+    var box4 = document.getElementById("3");
+	var box4Text = box4.innerHTML
+    var box5 = document.getElementById("4");
+	var box5Text = box5.innerHTML
+    var box6 = document.getElementById("5");
+	var box6Text = box6.innerHTML
+    var box7 = document.getElementById("6");
+	var box7Text = box7.innerHTML
+    var box8 = document.getElementById("7");
+	var box8Text = box8.innerHTML
+    var box9 = document.getElementById("8");
+	var box9Text = box9.innerHTML
+
+	// checks each possible scenario where a player can win.
+    if (((box1Text == "X") || (box1Text == "O")) && ((box1Text == box2Text) && (box2Text == box3Text))) {
+		//changes the background of the cells that have won the game.
+		box1.style.background = "green";
+		box2.style.background = "green";
+		box3.style.background = "green";
+        popup();
+    } else if (((box1Text == "X") || (box1Text == "O")) && ((box1Text == box4Text) && (box4Text == box7Text))) {
+        box1.style.background = "green";
+		box4.style.background = "green";
+		box7.style.background = "green";
+		popup();
+    } else if (((box9Text == "X") || (box9Text == "O")) && ((box9Text == box8Text) && (box8Text == box7Text))) {
+		box9.style.background = "green";
+		box8.style.background = "green";
+		box7.style.background = "green";
+		popup();
+    } else if (((box9Text == "X") || (box9Text == "O")) && ((box9Text == box6Text) && (box6Text == box3Text))) {
+		box9.style.background = "green";
+		box6.style.background = "green";
+		box3.style.background = "green";
+		popup();
+    } else if (((box4Text == "X") || (box4Text == "O")) && ((box4Text == box5Text) && (box5Text == box6Text))) {
+		box4.style.background = "green";
+		box5.style.background = "green";
+		box6.style.background = "green";
+		popup();
+    } else if (((box2Text == "X") || (box2Text == "O")) && ((box2Text == box5Text) && (box5Text == box8Text))) {
+		box2.style.background = "green";
+		box5.style.background = "green";
+		box8.style.background = "green";
+		popup();
+    } else if (((box1Text == "X") || (box1Text == "O")) && ((box1Text == box5Text) && (box5Text == box9Text))) {
+		box1.style.background = "green";
+		box5.style.background = "green";
+		box9.style.background = "green";
+		popup();
+    } else if (((box7Text == "X") || (box7Text == "O")) && ((box7Text == box5Text) && (box5Text == box3Text))) {
+		box7.style.background = "green";
+		box5.style.background = "green";
+		box3.style.background = "green";
+		popup();
+    }
+}
+
+function checkDraw() {
+	//checks if all of the moves have been made.
+	if(moves == 8) {
+		end = true;
+		// displays that there has been a draw.
+		var popupText = document.getElementById("result");
+		popupText.innerHTML = "Its a Draw!";
+	}
+}
+function popup() {
+	//displays which player has won the game.
+	end = true;
+    var popupText = document.getElementById("result");
+    popupText.innerHTML = "Player " + (player + 1) + " wins.";
+}
+</script>
+    
+<h1>Noughts and Crosses</h1>
+<body> 
+<div id="grid" onclick="Update()">
+  <div class="cell left" id="0"></div>
+  <div class="cell" id="1"></div>
+  <div class="cell" id="2"></div>
+  <div class="cell left" id="3"></div>
+  <div class="cell" id="4"></div>
+  <div class="cell" id="5"></div>
+  <div class="cell left" id="6"></div>
+  <div class="cell" id="7"></div>
+  <div class="cell" id="8"></div>
+</div>
+<div id="result"></div>
+    
+
+</body>
+</html>
